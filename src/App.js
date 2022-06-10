@@ -1,7 +1,13 @@
 import React from "react";
 
+import Header from "./components/header/header";
+
 function App() {
-  return <h1>Olá</h1>;
+  return (
+    <React.Fragment>
+      <Header />
+    </React.Fragment>
+  );
 }
 
 export default App;

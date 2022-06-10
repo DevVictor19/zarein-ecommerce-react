@@ -1,0 +1,70 @@
+.header {
+  height: 120px;
+  width: 100%;
+  border-bottom: 1px solid var(--black-25);
+  padding-top: 22px;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 64px;
+}
+
+.navWrapper {
+  width: 923px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 300;
+  font-size: 68px;
+  line-height: 80px;
+  color: var(--black);
+}
+
+.nav ul {
+  display: flex;
+  align-items: center;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: var(--black);
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  margin-right: 48px;
+}
+
+.nav ul li:last-child a {
+  margin-right: 0;
+}
+
+.sacolaIco {
+  cursor: pointer;
+}
+
+.sacolaDisplay {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  padding-top: 5px;
+
+  background-color: #d9d9d9;
+  color: var(--black);
+
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+}
