@@ -1,0 +1,30 @@
+.menuWrapper {
+  margin-top: 232px;
+  border-bottom: 1px solid var(--black-25);
+
+  display: flex;
+  justify-content: center;
+}
+
+.menuWrapper nav {
+  margin-bottom: 20px;
+}
+
+.menuWrapper nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuWrapper nav ul div {
+  margin: 0 24px;
+}
+
+.menuWrapper nav ul li a {
+  color: var(--black);
+  text-decoration: none;
+}
+
+.activeLink {
+  border-bottom: 1px solid var(--black-75);
+}
