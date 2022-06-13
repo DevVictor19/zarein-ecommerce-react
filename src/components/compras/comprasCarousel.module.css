@@ -1,0 +1,78 @@
+.carouselSectionWrapper {
+  margin-bottom: 136px;
+}
+
+.carouselTitle {
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 56px;
+  color: var(--black);
+
+  margin-bottom: 16px;
+}
+
+.carouselItemsWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.carouselEmpty {
+  width: 100%;
+  height: 488px;
+  text-align: center;
+  padding: 0 32px;
+
+  border-top: 1px solid var(--black);
+  border-bottom: 1px solid var(--black);
+}
+
+.carouselEmpty h2 {
+  margin-top: 204px;
+  font-weight: 300;
+  font-size: 68px;
+  line-height: 80px;
+  color: var(--black);
+}
+
+.carouselItems {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  scroll-behavior: smooth;
+}
+
+.carouselItems div:last-child {
+  margin-right: 0;
+}
+
+.bar {
+  position: absolute;
+  top: 0;
+
+  height: 488px;
+  background: rgba(0, 0, 0, 0.4);
+  mix-blend-mode: darken;
+
+  cursor: pointer;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+
+@media screen and (max-width: 1440px) {
+  .carouselTitle {
+    font-size: 40px;
+  }
+}
