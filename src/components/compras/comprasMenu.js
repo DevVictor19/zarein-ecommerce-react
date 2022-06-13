@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
+import { getProducts } from "../../data";
 
 import classes from "./comprasMenu.module.css";
 
@@ -9,6 +10,8 @@ const replaceSpecialChars = (str) => {
 
 const ComprasMenu = () => {
   const [searchParams, setSearchParams] = useSearchParams();
+
+  console.log(getProducts());
 
   useEffect(() => {
     setSearchParams({ filter: "todos" });
