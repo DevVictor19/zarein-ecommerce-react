@@ -18,7 +18,7 @@ const ComprasMenu = (props) => {
     event.preventDefault();
     const filter = replaceSpecialChars(event.target.innerHTML).toLowerCase();
     setSearchParams({ filter });
-    props.onClickMenu();
+    props.onClickMenu(filter);
   };
 
   let todosActiveClass = "";
