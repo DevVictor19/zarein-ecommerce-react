@@ -7,7 +7,7 @@ const replaceSpecialChars = (str) => {
   return str.normalize("NFD").replace(/[\u0300-\u036f]/g, ""); // Remove accents
 };
 
-const ComprasMenu = () => {
+const ComprasMenu = (props) => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   useEffect(() => {
@@ -18,6 +18,7 @@ const ComprasMenu = () => {
     event.preventDefault();
     const filter = replaceSpecialChars(event.target.innerHTML).toLowerCase();
     setSearchParams({ filter });
+    props.onClickMenu();
   };
 
   let todosActiveClass = "";

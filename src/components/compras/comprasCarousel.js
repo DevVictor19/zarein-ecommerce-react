@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 
 import ComprasCarouselItem from "./comprasCarouselItem";
@@ -6,35 +6,31 @@ import classes from "./comprasCarousel.module.css";
 import leftArrow from "../../assets/chevron-left.png";
 import rightArrow from "../../assets/chevron-right.png";
 
-const getPopulares = (products) => {
-  return products.filter((product) => product.populares);
-};
-
-const getPromocao = (products) => {
-  return products.filter((product) => product.promocao);
+const getFilteredProducts = (products, filter) => {
+  return products.filter((product) => filter === "todos" || product[filter]);
 };
 
 const ComprasCarousel = (props) => {
-  const carouselRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const carouselRef = useRef("");
   const searchParams = useSearchParams()[0];
   const currentFilter = searchParams.get("filter");
 
-  let filteredProducts = [...props.products];
-
-  switch (currentFilter) {
-    case "promocao":
-      filteredProducts = getPromocao(filteredProducts);
-      break;
-    case "populares":
-      filteredProducts = getPopulares(filteredProducts);
-      break;
-    default:
-      break;
-  }
+  const filteredProducts = getFilteredProducts(props.products, currentFilter);
 
   const scroll = (scrollOffset) => {
     carouselRef.current.scrollLeft += scrollOffset;
   };
+
+  useEffect(() => {
+    const timeOut = setTimeout(() => {
+      setIsVisible(true);
+    }, 200);
+
+    return () => {
+      clearTimeout(timeOut);
+    };
+  }, []);
 
   let content = (
     <>
@@ -67,7 +63,11 @@ const ComprasCarousel = (props) => {
   }
 
   return (
-    <section className={classes.carouselSectionWrapper}>
+    <section
+      className={`${classes.carouselSectionWrapper} ${
+        isVisible && classes.carouselSectionWrapperFade
+      }`}
+    >
       <h1 className={classes.carouselTitle}>{props.name}</h1>
       <div className={classes.carouselItemsWrapper}>{content}</div>
     </section>

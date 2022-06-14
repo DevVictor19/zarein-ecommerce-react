@@ -28,8 +28,8 @@ const products = [
         id: "v2",
         img: images["JardinsDoInverno.png"],
         price: 104.79,
-        populares: true,
-        promocao: true,
+        populares: false,
+        promocao: false,
       },
       {
         name: "Roseira Seda",

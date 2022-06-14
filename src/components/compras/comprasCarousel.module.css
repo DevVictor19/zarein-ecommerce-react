@@ -1,5 +1,10 @@
 .carouselSectionWrapper {
   margin-bottom: 136px;
+  opacity: 0;
+}
+.carouselSectionWrapperFade {
+  opacity: 1;
+  transition: 0.6s ease-in;
 }
 
 .carouselTitle {
@@ -61,6 +66,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: 0.6s ease-in;
 }
 
 .left {
@@ -69,6 +75,21 @@
 
 .right {
   right: 0;
+}
+
+.my-node-enter {
+  opacity: 0;
+}
+.my-node-enter-active {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+.my-node-exit {
+  opacity: 1;
+}
+.my-node-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
 }
 
 @media screen and (max-width: 1440px) {
