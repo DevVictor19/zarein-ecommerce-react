@@ -13,7 +13,7 @@ const Header = () => {
   };
 
   return (
-    <div className={classes.header}>
+    <header className={classes.header}>
       <div className={classes.wrapper}>
         <div className={classes.navWrapper}>
           <h1 className={classes.logo}>Zarein</h1>
@@ -48,7 +48,7 @@ const Header = () => {
         </div>
         <div className={classes.sacolaDisplay}>3</div>
       </div>
-    </div>
+    </header>
   );
 };
 
