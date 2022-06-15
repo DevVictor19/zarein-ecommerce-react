@@ -4,7 +4,7 @@ import { useSearchParams } from "react-router-dom";
 import ComprasCarousel from "../components/compras/comprasCarousel";
 import ComprasMenu from "../components/compras/comprasMenu";
 
-import { getProducts } from "../data";
+import { getProducts } from "../data/products";
 
 const Compras = () => {
   const products = getProducts();

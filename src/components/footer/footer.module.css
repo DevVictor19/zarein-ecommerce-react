@@ -40,3 +40,25 @@ div.footerIcons a:nth-child(2) {
 
   margin-top: 142px;
 }
+
+@media screen and (max-width: 1440px) {
+  .footerWrapper h1 {
+    font-size: 56px;
+  }
+
+  div.footerIcons a:nth-child(1) img {
+    width: 66px;
+  }
+
+  div.footerIcons a:nth-child(2) img {
+    width: 58px;
+  }
+
+  div.footerIcons a:nth-child(3) img {
+    width: 77px;
+  }
+
+  .footerWrapper p {
+    font-size: 18px;
+  }
+}

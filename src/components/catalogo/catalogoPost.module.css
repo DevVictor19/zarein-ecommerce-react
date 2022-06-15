@@ -1,0 +1,57 @@
+.post {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 256px;
+}
+
+.post:nth-child(even) .text {
+  order: 1;
+  margin-right: 165px;
+}
+
+.post:nth-child(odd) .text {
+  margin-left: 165px;
+}
+
+.post:nth-child(even) img {
+  order: 2;
+}
+
+.post:last-child {
+  margin-bottom: 0;
+}
+
+.text {
+  width: 536px;
+}
+
+.text h1 {
+  color: var(--black);
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 56px;
+}
+
+.text p {
+  color: var(--black-75);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 40px;
+  margin-top: 32px;
+}
+
+@media screen and (max-width: 1440px) {
+  .post img {
+    width: 520px;
+  }
+
+  .text h1 {
+    font-size: 40px;
+  }
+
+  .text p {
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
