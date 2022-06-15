@@ -5,6 +5,12 @@
   margin-bottom: 256px;
 }
 
+.post img {
+  object-fit: contain;
+  width: 520px;
+  height: 600px;
+}
+
 .post:nth-child(even) .text {
   order: 1;
   margin-right: 165px;
@@ -42,10 +48,6 @@
 }
 
 @media screen and (max-width: 1440px) {
-  .post img {
-    width: 520px;
-  }
-
   .text h1 {
     font-size: 40px;
   }
@@ -53,5 +55,12 @@
   .text p {
     font-size: 18px;
     line-height: 32px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .post img {
+    width: 600px;
+    height: auto;
   }
 }

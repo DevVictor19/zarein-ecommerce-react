@@ -6,6 +6,7 @@ import "./index.css";
 import App from "./App";
 import Compras from "./routes/compras";
 import Catalogo from "./routes/catalogo";
+import Sobre from "./routes/sobre";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -14,6 +15,7 @@ root.render(
       <Route path="/" element={<App />}>
         <Route index element={<Compras />} />
         <Route path="catalogo" element={<Catalogo />} />
+        <Route path="sobre" element={<Sobre />} />
       </Route>
     </Routes>
   </BrowserRouter>

@@ -11,6 +11,18 @@ const getFilteredProducts = (products, filter) => {
   return products.filter((product) => filter === "todos" || product[filter]);
 };
 
+const defaultStyle = {
+  transition: `opacity 0.6s ease-in-out`,
+  opacity: 0,
+};
+
+const transitionStyles = {
+  entering: { opacity: 0 },
+  entered: { opacity: 1 },
+  exiting: { opacity: 0 },
+  exited: { opacity: 0 },
+};
+
 const ComprasCarousel = (props) => {
   const [isVisible, setIsVisible] = useState(false);
   const { controlAnimation, products: currentProducts } = props;
@@ -20,18 +32,6 @@ const ComprasCarousel = (props) => {
   const [products, setProducts] = useState(
     getFilteredProducts(currentProducts, currentFilter)
   );
-
-  const defaultStyle = {
-    transition: `opacity 0.6s ease-in-out`,
-    opacity: 0,
-  };
-
-  const transitionStyles = {
-    entering: { opacity: 0 },
-    entered: { opacity: 1 },
-    exiting: { opacity: 0 },
-    exited: { opacity: 0 },
-  };
 
   useEffect(() => {
     setIsVisible(controlAnimation);
@@ -82,20 +82,22 @@ const ComprasCarousel = (props) => {
     <Transition
       in={isVisible}
       timeout={{
-        exit: 100,
+        exit: 50,
         enter: 500,
       }}
     >
       {(state) => (
-        <section
-          style={{
-            ...defaultStyle,
-            ...transitionStyles[state],
-          }}
-          className={classes.carouselSectionWrapper}
-        >
+        <section className={classes.carouselSectionWrapper}>
           <h1 className={classes.carouselTitle}>{props.name}</h1>
-          <div className={classes.carouselItemsWrapper}>{content}</div>
+          <div
+            className={classes.carouselItemsWrapper}
+            style={{
+              ...defaultStyle,
+              ...transitionStyles[state],
+            }}
+          >
+            {content}
+          </div>
         </section>
       )}
     </Transition>

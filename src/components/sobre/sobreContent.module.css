@@ -1,0 +1,74 @@
+.mainContent {
+  display: flex;
+  justify-content: center;
+}
+
+.mainContent img {
+  width: 720px;
+  object-fit: fill;
+  margin-right: 80px;
+}
+
+.mainContent div {
+  max-width: 536px;
+  padding: 0 10px;
+}
+
+.mainContent div h1 {
+  font-weight: 500;
+  font-size: 48px;
+
+  color: var(--black);
+}
+
+.mainContent div p {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 40px;
+
+  margin-top: 32px;
+  color: var(--black-75);
+}
+
+.content h2 {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40px;
+  color: var(--black-75);
+
+  margin-top: 64px;
+}
+
+.content p {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 40px;
+  color: var(--black-75);
+
+  margin-top: 24px;
+}
+
+.quote {
+  width: 100%;
+  text-align: center;
+  margin-top: 64px;
+}
+
+.quote a {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 40px;
+  text-decoration: underline 1px solid var(--black);
+  color: var(--black);
+}
+
+@media screen and (max-width: 1440px) {
+  .mainContent div h1 {
+    font-size: 40px;
+  }
+
+  .mainContent div p {
+    font-size: 18px;
+    line-height: 32px;
+  }
+}

@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 
 import ComprasCarousel from "../components/compras/comprasCarousel";
 import ComprasMenu from "../components/compras/comprasMenu";
+import FadeIn from "../components/UI/fadeIn";
 
 import { getProducts } from "../data/products";
 
@@ -46,7 +47,7 @@ const Compras = () => {
     }, 400);
   };
   return (
-    <>
+    <FadeIn>
       <ComprasMenu onClickMenu={fadeEffectHandler} />
       <main style={{ padding: "88px 64px 0" }}>
         {products.map((product) => (
@@ -58,7 +59,7 @@ const Compras = () => {
           />
         ))}
       </main>
-    </>
+    </FadeIn>
   );
 };
 
