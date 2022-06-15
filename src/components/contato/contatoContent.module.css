@@ -1,0 +1,25 @@
+.contato {
+  display: flex;
+  justify-content: center;
+}
+
+.contatoTexts {
+  margin-left: 128px;
+  max-width: 536px;
+}
+
+.contatoTexts h1 {
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 56px;
+  color: var(--black);
+}
+
+.contatoTexts p {
+  margin-top: 24px;
+
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: var(--black-75);
+}

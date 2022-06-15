@@ -1,13 +1,11 @@
 import SobreContent from "../components/sobre/sobreContent";
-import FadeIn from "../components/UI/fadeIn";
+import FadeInMain from "../components/UI/fadeInMain";
 
 const Sobre = () => {
   return (
-    <FadeIn>
-      <main style={{ padding: "88px 64px" }}>
-        <SobreContent />
-      </main>
-    </FadeIn>
+    <FadeInMain style={{ padding: "88px 64px" }}>
+      <SobreContent />
+    </FadeInMain>
   );
 };
 

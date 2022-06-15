@@ -1,4 +1,3 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 
@@ -7,6 +6,7 @@ import App from "./App";
 import Compras from "./routes/compras";
 import Catalogo from "./routes/catalogo";
 import Sobre from "./routes/sobre";
+import Contato from "./routes/contato";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -16,6 +16,7 @@ root.render(
         <Route index element={<Compras />} />
         <Route path="catalogo" element={<Catalogo />} />
         <Route path="sobre" element={<Sobre />} />
+        <Route path="contato" element={<Contato />} />
       </Route>
     </Routes>
   </BrowserRouter>

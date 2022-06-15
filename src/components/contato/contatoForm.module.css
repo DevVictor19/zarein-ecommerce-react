@@ -1,0 +1,63 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form label {
+  font-family: "Quicksand";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 40px;
+  color: var(--black);
+}
+
+.form input {
+  padding: 0 24px;
+  margin-bottom: 32px;
+
+  background-color: var(--black-5);
+  border: 1px solid var(--black-25);
+  border-radius: 4px;
+
+  width: 648px;
+  height: 56px;
+  color: var(--black-75);
+  font-size: 24px;
+}
+
+.form textarea {
+  padding: 8px 24px;
+  margin-bottom: 32px;
+
+  font-size: 24px;
+  color: var(--black-75);
+
+  background-color: var(--black-5);
+  border: 1px solid var(--black-25);
+  border-radius: 4px;
+
+  resize: none;
+  width: 648px;
+  height: 136px;
+}
+
+.form button {
+  border: none;
+  outline: none;
+
+  width: 294px;
+  height: 88px;
+  color: #fff;
+  background-color: var(--black);
+
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 40px;
+
+  cursor: pointer;
+  transition: 0.4s ease-in;
+}
+
+.form button:active {
+  background-color: var(--black-50);
+}
