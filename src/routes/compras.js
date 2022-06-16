@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState } from "react";
 
 import ComprasCarousel from "../components/compras/comprasCarousel";
 import ComprasMenu from "../components/compras/comprasMenu";
@@ -10,17 +10,14 @@ const Compras = () => {
   const [currentFilter, setCurrentFilter] = useState("todos");
   const [firstRender, setFirstRender] = useState(true);
 
-  const onClickFilterLink = useCallback(
-    (filter) => {
-      if (filter === currentFilter) {
-        return;
-      }
+  const onClickFilterLink = (filter) => {
+    if (filter === currentFilter) {
+      return;
+    }
 
-      setFirstRender(false);
-      setCurrentFilter(filter);
-    },
-    [currentFilter]
-  );
+    setFirstRender(false);
+    setCurrentFilter(filter);
+  };
 
   return (
     <>

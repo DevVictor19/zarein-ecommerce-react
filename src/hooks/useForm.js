@@ -12,11 +12,13 @@ const useForm = (validationFn) => {
     setWasTouched(true);
   };
 
-  const isValid = validationFn(inputValue);
-  const hasError = !isValid && wasTouched;
+  const validation = validationFn(inputValue);
+  const hasError = !validation && wasTouched;
+  const isValid = validation && !hasError;
 
   return {
     inputValue,
+    isValid,
     hasError,
     onChangeHandler,
     onBlurHandler,

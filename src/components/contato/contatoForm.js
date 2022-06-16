@@ -13,6 +13,7 @@ const messageIsBigEnough = (message) => {
 const ContatoForm = () => {
   const {
     inputValue: nameInputValue,
+    isValid: nameIsValid,
     hasError: nameHasError,
     onChangeHandler: nameOnChangeHandler,
     onBlurHandler: nameOnBlurHandler,
@@ -20,6 +21,7 @@ const ContatoForm = () => {
 
   const {
     inputValue: emailInputValue,
+    isValid: emailIsValid,
     hasError: emailHasError,
     onChangeHandler: emailOnChangeHandler,
     onBlurHandler: emailOnBlurHandler,
@@ -27,6 +29,7 @@ const ContatoForm = () => {
 
   const {
     inputValue: subjectInputValue,
+    isValid: subjectIsValid,
     hasError: subjectHasError,
     onChangeHandler: subjectOnChangeHandler,
     onBlurHandler: subjectOnBlurHandler,
@@ -34,6 +37,7 @@ const ContatoForm = () => {
 
   const {
     inputValue: messageInputValue,
+    isValid: messageIsValid,
     hasError: messageHasError,
     onChangeHandler: messageOnChangeHandler,
     onBlurHandler: messageOnBlurHandler,
@@ -43,7 +47,7 @@ const ContatoForm = () => {
   const textareaErrorMessage = "está muito curta! (min: 20 caracteres)";
 
   const formIsValid =
-    !nameHasError && !emailHasError && !subjectHasError && !messageHasError;
+    nameIsValid && emailIsValid && subjectIsValid && messageIsValid;
 
   const submitHandler = (event) => {
     event.preventDefault();

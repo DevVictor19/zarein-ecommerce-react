@@ -7,7 +7,7 @@ const replaceSpecialChars = (str) => {
   return str.normalize("NFD").replace(/[\u0300-\u036f]/g, ""); // Remove accents
 };
 
-const ComprasMenu = React.memo((props) => {
+const ComprasMenu = (props) => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   useEffect(() => {
@@ -75,6 +75,6 @@ const ComprasMenu = React.memo((props) => {
       </nav>
     </div>
   );
-});
+};
 
 export default ComprasMenu;
