@@ -34,7 +34,9 @@ const ComprasCarousel = (props) => {
     getFilteredProducts(products, filter)
   );
 
-  console.log("render");
+  const scroll = (scrollOffset) => {
+    carouselRef.current.scrollLeft += scrollOffset;
+  };
 
   useEffect(() => {
     if (isFirstRender) {
@@ -54,10 +56,6 @@ const ComprasCarousel = (props) => {
       clearTimeout(fadeInUpdatedProducts);
     };
   }, [filter, isFirstRender, products]);
-
-  const scroll = (scrollOffset) => {
-    carouselRef.current.scrollLeft += scrollOffset;
-  };
 
   let content = (
     <>
@@ -90,10 +88,10 @@ const ComprasCarousel = (props) => {
   }
 
   return (
-    <Transition in={isVisible} timeout={duration}>
-      {(state) => (
-        <section className={classes.carouselSectionWrapper}>
-          <h1 className={classes.carouselTitle}>{props.name}</h1>
+    <section className={classes.carouselSectionWrapper}>
+      <h1 className={classes.carouselTitle}>{props.name}</h1>
+      <Transition in={isVisible} timeout={duration}>
+        {(state) => (
           <div
             className={classes.carouselItemsWrapper}
             style={{
@@ -103,9 +101,9 @@ const ComprasCarousel = (props) => {
           >
             {content}
           </div>
-        </section>
-      )}
-    </Transition>
+        )}
+      </Transition>
+    </section>
   );
 };
 

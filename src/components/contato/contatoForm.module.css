@@ -61,3 +61,8 @@
 .form button:active {
   background-color: var(--black-50);
 }
+
+.error {
+  border: 1px solid rgb(175, 51, 51) !important;
+  background-color: rgba(175, 51, 51, 0.25) !important;
+}
