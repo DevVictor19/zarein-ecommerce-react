@@ -1,5 +1,4 @@
 import { useRef, useState, useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
 import { Transition } from "react-transition-group";
 
 import ComprasCarouselItem from "./comprasCarouselItem";
@@ -11,8 +10,10 @@ const getFilteredProducts = (products, filter) => {
   return products.filter((product) => filter === "todos" || product[filter]);
 };
 
+const duration = 600;
+
 const defaultStyle = {
-  transition: `opacity 0.6s ease-in-out`,
+  transition: `opacity ${duration}ms ease-in`,
   opacity: 0,
 };
 
@@ -25,24 +26,34 @@ const transitionStyles = {
 
 const ComprasCarousel = (props) => {
   const [isVisible, setIsVisible] = useState(false);
-  const { controlAnimation, products: currentProducts } = props;
   const carouselRef = useRef("");
-  const searchParams = useSearchParams()[0];
-  const currentFilter = searchParams.get("filter");
-  const [products, setProducts] = useState(
-    getFilteredProducts(currentProducts, currentFilter)
+
+  const { filter, products, isFirstRender } = props;
+
+  const [currentProducts, setCurrentProducts] = useState(
+    getFilteredProducts(products, filter)
   );
 
+  console.log("render");
+
   useEffect(() => {
-    setIsVisible(controlAnimation);
-    const timeout = setTimeout(() => {
-      setProducts(getFilteredProducts(currentProducts, currentFilter));
-    }, 500);
+    if (isFirstRender) {
+      setIsVisible(true);
+      return;
+    }
+    setIsVisible(false);
+
+    const fadeInUpdatedProducts = setTimeout(() => {
+      setIsVisible(true);
+      setTimeout(() => {
+        setCurrentProducts(getFilteredProducts(products, filter));
+      }, 400);
+    }, 600);
 
     return () => {
-      clearTimeout(timeout);
+      clearTimeout(fadeInUpdatedProducts);
     };
-  }, [controlAnimation, currentFilter, currentProducts]);
+  }, [filter, isFirstRender, products]);
 
   const scroll = (scrollOffset) => {
     carouselRef.current.scrollLeft += scrollOffset;
@@ -51,7 +62,7 @@ const ComprasCarousel = (props) => {
   let content = (
     <>
       <div className={classes.carouselItems} ref={carouselRef}>
-        {products.map((item) => (
+        {currentProducts.map((item) => (
           <ComprasCarouselItem key={item.id} item={item} />
         ))}
       </div>
@@ -70,7 +81,7 @@ const ComprasCarousel = (props) => {
     </>
   );
 
-  if (products.length === 0) {
+  if (currentProducts.length === 0) {
     content = (
       <div className={classes.carouselEmpty}>
         <h2>Sem produtos por enquanto</h2>
@@ -79,13 +90,7 @@ const ComprasCarousel = (props) => {
   }
 
   return (
-    <Transition
-      in={isVisible}
-      timeout={{
-        exit: 50,
-        enter: 500,
-      }}
-    >
+    <Transition in={isVisible} timeout={duration}>
       {(state) => (
         <section className={classes.carouselSectionWrapper}>
           <h1 className={classes.carouselTitle}>{props.name}</h1>

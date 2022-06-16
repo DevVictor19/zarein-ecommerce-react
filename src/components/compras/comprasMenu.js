@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 
 import classes from "./comprasMenu.module.css";
@@ -7,7 +7,7 @@ const replaceSpecialChars = (str) => {
   return str.normalize("NFD").replace(/[\u0300-\u036f]/g, ""); // Remove accents
 };
 
-const ComprasMenu = (props) => {
+const ComprasMenu = React.memo((props) => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   useEffect(() => {
@@ -75,6 +75,6 @@ const ComprasMenu = (props) => {
       </nav>
     </div>
   );
-};
+});
 
 export default ComprasMenu;

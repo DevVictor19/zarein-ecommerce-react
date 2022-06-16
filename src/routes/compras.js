@@ -1,63 +1,41 @@
-import { useState, useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useState, useCallback } from "react";
 
 import ComprasCarousel from "../components/compras/comprasCarousel";
 import ComprasMenu from "../components/compras/comprasMenu";
-
+import FadeInMain from "../components/UI/fadeInMain";
 import { getProducts } from "../data/products";
 
 const Compras = () => {
   const products = getProducts();
-  const searchParams = useSearchParams()[0];
-  const [fadeCarosel, setFadeCarosel] = useState({
-    firstRender: true,
-    isVisible: false,
-    currentFilter: "",
-  });
+  const [currentFilter, setCurrentFilter] = useState("todos");
+  const [firstRender, setFirstRender] = useState(true);
 
-  useEffect(() => {
-    setFadeCarosel((s) => ({
-      ...s,
-      currentFilter: searchParams.get("filter"),
-    }));
-  }, [searchParams]);
+  const onClickFilterLink = useCallback(
+    (filter) => {
+      if (filter === currentFilter) {
+        return;
+      }
 
-  const animationStarts = fadeCarosel.firstRender || fadeCarosel.isVisible;
+      setFirstRender(false);
+      setCurrentFilter(filter);
+    },
+    [currentFilter]
+  );
 
-  const fadeEffectHandler = (filter) => {
-    if (filter === fadeCarosel.currentFilter) {
-      return;
-    }
-
-    // animacao de saida -> animationStarts deve ser false
-    setFadeCarosel({
-      firstRender: false,
-      isVisible: false,
-      currentFilter: filter,
-    });
-
-    // animacao de entrada -> animationStarts deve ser true
-    setTimeout(() => {
-      setFadeCarosel({
-        firstRender: false,
-        isVisible: true,
-        currentFilter: filter,
-      });
-    }, 400);
-  };
   return (
     <>
-      <ComprasMenu onClickMenu={fadeEffectHandler} />
-      <main style={{ padding: "88px 64px 0" }}>
+      <ComprasMenu onClickMenu={onClickFilterLink} />
+      <FadeInMain style={{ padding: "88px 64px 0" }}>
         {products.map((product) => (
           <ComprasCarousel
             key={product.sectionName}
             name={product.sectionName}
             products={product.sectionProducts}
-            controlAnimation={animationStarts}
+            filter={currentFilter}
+            isFirstRender={firstRender}
           />
         ))}
-      </main>
+      </FadeInMain>
     </>
   );
 };
