@@ -21,6 +21,7 @@ const products = [
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
         img: images["FlorDoCampo.png"],
+        sizes: ["P", "M", "G", "GG"],
         price: 218.79,
         populares: true,
         promocao: false,
@@ -31,6 +32,7 @@ const products = [
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
         img: images["JardinsDoInverno.png"],
+        sizes: ["P", "M", "G", "GG"],
         price: 134.79,
         populares: false,
         promocao: false,
@@ -41,6 +43,7 @@ const products = [
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
         img: images["RoseiraSeda.png"],
+        sizes: ["P", "M", "G", "GG"],
         price: 258.39,
         populares: true,
         promocao: false,
@@ -51,6 +54,7 @@ const products = [
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
         img: images["RuasDeRoma.png"],
+        sizes: ["P", "M", "G", "GG"],
         price: 158.79,
         populares: false,
         promocao: false,
@@ -62,6 +66,7 @@ const products = [
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
         img: images["RuasDeRoma.png"],
+        sizes: ["P", "M", "G", "GG"],
         price: 158.79,
         populares: false,
         promocao: false,
@@ -73,6 +78,7 @@ const products = [
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
         img: images["RuasDeRoma.png"],
+        sizes: ["P", "M", "G", "GG"],
         price: 158.79,
         populares: false,
         promocao: false,
@@ -88,6 +94,7 @@ const products = [
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
         img: images["Floricultura.png"],
+        sizes: null,
         price: 148.19,
         populares: false,
         promocao: false,
@@ -98,6 +105,7 @@ const products = [
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
         img: images["Obsidiana.png"],
+        sizes: null,
         price: 210.38,
         populares: true,
         promocao: false,
@@ -108,6 +116,7 @@ const products = [
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
         img: images["Nublada.png"],
+        sizes: null,
         price: 138.32,
         populares: false,
         promocao: false,
@@ -118,6 +127,7 @@ const products = [
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
         img: images["NoiteElegante.png"],
+        sizes: null,
         price: 228.32,
         populares: true,
         promocao: true,
@@ -133,6 +143,7 @@ const products = [
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
         img: images["PedrasDoBosque.png"],
+        sizes: ["34", "35", "36", "37", "38", "39"],
         price: 189.32,
         populares: false,
         promocao: false,
@@ -143,6 +154,7 @@ const products = [
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
         img: images["SimplesModernidade.png"],
+        sizes: ["34", "35", "36", "37", "38", "39"],
         price: 256.65,
         populares: true,
         promocao: false,
@@ -153,6 +165,7 @@ const products = [
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
         img: images["BosquesNoturnos.png"],
+        sizes: ["34", "35", "36", "37", "38", "39"],
         price: 128.98,
         populares: false,
         promocao: true,
@@ -163,6 +176,7 @@ const products = [
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
         img: images["PerolaMarinha.png"],
+        sizes: ["34", "35", "36", "37", "38", "39"],
         price: 231.12,
         populares: true,
         promocao: true,
@@ -179,6 +193,7 @@ const products = [
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
         img: images["GotaNoOceano.png"],
+        sizes: null,
         price: 78.32,
         populares: false,
         promocao: true,
@@ -189,6 +204,7 @@ const products = [
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
         img: images["DunasDeAreia.png"],
+        sizes: null,
         price: 98.65,
         populares: true,
         promocao: false,
@@ -199,6 +215,7 @@ const products = [
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
         img: images["InfinitoAzul.png"],
+        sizes: null,
         price: 118.98,
         populares: false,
         promocao: false,
@@ -209,6 +226,7 @@ const products = [
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
         img: images["CamposPacatos.png"],
+        sizes: null,
         price: 161.32,
         populares: true,
         promocao: false,

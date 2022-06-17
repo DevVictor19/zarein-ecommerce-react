@@ -18,6 +18,8 @@ const Produto = () => {
           description={product.description}
           img={product.img}
           price={product.price}
+          sizes={product.sizes}
+          id={product.id}
         />
       </FadeInMain>
     </>
