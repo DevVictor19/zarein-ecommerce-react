@@ -61,7 +61,13 @@ const ComprasCarousel = (props) => {
     <>
       <div className={classes.carouselItems} ref={carouselRef}>
         {currentProducts.map((item) => (
-          <ComprasCarouselItem key={item.id} item={item} />
+          <ComprasCarouselItem
+            key={item.id}
+            name={item.name}
+            img={item.img}
+            price={item.price}
+            id={item.id}
+          />
         ))}
       </div>
       <div

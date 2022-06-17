@@ -9,6 +9,7 @@
 
 * {
   box-sizing: border-box;
+  user-select: none;
 }
 
 html {
@@ -19,4 +20,5 @@ body {
   font-family: "Raleway", sans-serif;
   max-width: 1820px;
   margin: 0 auto;
+  user-select: n;
 }

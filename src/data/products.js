@@ -18,6 +18,8 @@ const products = [
       {
         name: "Flor do Campo",
         id: "v1",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
         img: images["FlorDoCampo.png"],
         price: 218.79,
         populares: true,
@@ -26,6 +28,8 @@ const products = [
       {
         name: "Jardins do Inverno",
         id: "v2",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
         img: images["JardinsDoInverno.png"],
         price: 134.79,
         populares: false,
@@ -34,6 +38,8 @@ const products = [
       {
         name: "Roseira Seda",
         id: "v3",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
         img: images["RoseiraSeda.png"],
         price: 258.39,
         populares: true,
@@ -42,6 +48,8 @@ const products = [
       {
         name: "Ruas de Roma",
         id: "v4",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
         img: images["RuasDeRoma.png"],
         price: 158.79,
         populares: false,
@@ -51,6 +59,8 @@ const products = [
       {
         name: "Ruas de Roma",
         id: "v5",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
         img: images["RuasDeRoma.png"],
         price: 158.79,
         populares: false,
@@ -60,6 +70,8 @@ const products = [
       {
         name: "Ruas de Roma",
         id: "v6",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
         img: images["RuasDeRoma.png"],
         price: 158.79,
         populares: false,
@@ -73,6 +85,8 @@ const products = [
       {
         name: "Floricultura",
         id: "b1",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
         img: images["Floricultura.png"],
         price: 148.19,
         populares: false,
@@ -81,6 +95,8 @@ const products = [
       {
         name: "Obsidiana",
         id: "b2",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
         img: images["Obsidiana.png"],
         price: 210.38,
         populares: true,
@@ -89,6 +105,8 @@ const products = [
       {
         name: "Nublada",
         id: "b3",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
         img: images["Nublada.png"],
         price: 138.32,
         populares: false,
@@ -97,6 +115,8 @@ const products = [
       {
         name: "Noite Elegante",
         id: "b4",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
         img: images["NoiteElegante.png"],
         price: 228.32,
         populares: true,
@@ -110,6 +130,8 @@ const products = [
       {
         name: "Pedras do Bosque",
         id: "c1",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
         img: images["PedrasDoBosque.png"],
         price: 189.32,
         populares: false,
@@ -118,6 +140,8 @@ const products = [
       {
         name: "Simples Modernidade",
         id: "c2",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
         img: images["SimplesModernidade.png"],
         price: 256.65,
         populares: true,
@@ -126,6 +150,8 @@ const products = [
       {
         name: "Bosques Noturnos",
         id: "c3",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
         img: images["BosquesNoturnos.png"],
         price: 128.98,
         populares: false,
@@ -134,6 +160,8 @@ const products = [
       {
         name: "Pérola Marinha",
         id: "c4",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
         img: images["PerolaMarinha.png"],
         price: 231.12,
         populares: true,
@@ -148,6 +176,8 @@ const products = [
       {
         name: "Gota no Oceano",
         id: "a1",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
         img: images["GotaNoOceano.png"],
         price: 78.32,
         populares: false,
@@ -156,6 +186,8 @@ const products = [
       {
         name: "Dunas de Areia",
         id: "a2",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
         img: images["DunasDeAreia.png"],
         price: 98.65,
         populares: true,
@@ -163,7 +195,9 @@ const products = [
       },
       {
         name: "Infinito Azul",
-        id: "c3",
+        id: "a3",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
         img: images["InfinitoAzul.png"],
         price: 118.98,
         populares: false,
@@ -171,7 +205,9 @@ const products = [
       },
       {
         name: "Campos Pacatos",
-        id: "c4",
+        id: "a4",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
         img: images["CamposPacatos.png"],
         price: 161.32,
         populares: true,
@@ -182,3 +218,21 @@ const products = [
 ];
 
 export const getProducts = () => products;
+
+export const getProductsById = (id) => {
+  const array_of_arrays_SectionProducts = products.map(
+    (sectionObj) => sectionObj.sectionProducts
+  );
+
+  let filteredItem = null;
+
+  array_of_arrays_SectionProducts.forEach((arrayOfproducts) => {
+    arrayOfproducts.forEach((item) => {
+      if (item.id === id) {
+        filteredItem = item;
+      }
+    });
+  });
+
+  return filteredItem;
+};

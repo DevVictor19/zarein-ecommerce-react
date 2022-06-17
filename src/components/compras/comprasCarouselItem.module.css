@@ -36,12 +36,13 @@
   color: var(--black-50);
 }
 
-.item button {
+.item a {
   position: absolute;
   top: 300px;
   left: 0;
   right: 0;
   margin: auto;
+  padding-top: 15px;
 
   width: 200px;
   height: 72px;
@@ -54,6 +55,8 @@
   font-weight: 400;
   font-size: 24px;
   line-height: 40px;
+  text-decoration: none;
+  text-align: center;
 
   z-index: 1;
   cursor: pointer;
@@ -62,7 +65,7 @@
   transition: 0.3s ease-in;
 }
 
-div.item:hover button {
+div.item:hover a {
   opacity: 1;
 }
 

@@ -8,7 +8,12 @@ const Catalogo = () => {
   return (
     <FadeInMain style={{ padding: "88px 64px" }}>
       {posts.map((post) => (
-        <CatalogoPost key={post.post_id} post={post} />
+        <CatalogoPost
+          key={post.post_id}
+          img={post.post_img}
+          title={post.post_title}
+          paragraphs={post.post_paragraphs}
+        />
       ))}
     </FadeInMain>
   );

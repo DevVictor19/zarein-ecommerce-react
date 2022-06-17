@@ -1,0 +1,103 @@
+.produtosOrderWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.produtosOrderWrapper img {
+  height: 512px;
+  width: 400px;
+  object-fit: contain;
+}
+
+.produtosInfo {
+  max-width: 928px;
+  margin-left: 108px;
+}
+
+.produtosInfo h1 {
+  font-weight: 300;
+  font-size: 64px;
+  letter-spacing: 8px;
+  color: var(--black);
+}
+
+.produtosInfo p {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 40px;
+  color: var(--black-75);
+
+  margin-top: 16px;
+}
+
+.produtosInfo h2 {
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 56px;
+  color: var(--black);
+  margin-top: 24px;
+}
+
+.produtosInfo button {
+  width: 295px;
+  height: 88px;
+  background-color: var(--black-25);
+  border: none;
+
+  font-family: "Quicksand";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 40px;
+  color: var(--black);
+  margin-top: 32px;
+
+  cursor: pointer;
+}
+
+.produtosActions {
+  display: flex;
+  align-items: center;
+
+  margin-top: 24px;
+}
+
+.produtosActions label {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: var(--black-75);
+  margin-bottom: 8px;
+}
+
+.produtosActions div {
+  display: flex;
+  flex-direction: column;
+
+  font-weight: 200;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.produtosActions select {
+  width: 295px;
+  height: 88.69px;
+  background: var(--black-5);
+  border: 1px solid var(--black-75);
+  border-radius: 4px;
+  padding-left: 20px;
+  color: var(--black-75);
+}
+
+.produtosActions input {
+  width: 160px;
+  height: 89px;
+  background: var(--black-5);
+  border: 1px solid var(--black-75);
+  border-radius: 4px;
+  color: var(--black-75);
+  padding-left: 20px;
+}
+
+.qntInput {
+  margin-left: 24px;
+}

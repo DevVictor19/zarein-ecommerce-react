@@ -7,6 +7,7 @@ import Compras from "./routes/compras";
 import Catalogo from "./routes/catalogo";
 import Sobre from "./routes/sobre";
 import Contato from "./routes/contato";
+import Produto from "./routes/produto";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -17,6 +18,7 @@ root.render(
         <Route path="catalogo" element={<Catalogo />} />
         <Route path="sobre" element={<Sobre />} />
         <Route path="contato" element={<Contato />} />
+        <Route path=":productID" element={<Produto />} />
       </Route>
     </Routes>
   </BrowserRouter>
