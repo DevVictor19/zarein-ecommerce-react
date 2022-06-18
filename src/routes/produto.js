@@ -1,13 +1,18 @@
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import { getProductsById } from "../data/products";
-import ProdutosMenu from "../components/produtos/produtosMenu";
-import ProdutosOrder from "../components/produtos/produtosOrder";
+import ProdutosMenu from "../components/produtos/produtoMenu";
+import ProdutosOrder from "../components/produtos/produtoOrder";
 import FadeInMain from "../components/UI/fadeInMain";
 
 const Produto = () => {
   const { productID } = useParams();
   const product = getProductsById(productID);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>

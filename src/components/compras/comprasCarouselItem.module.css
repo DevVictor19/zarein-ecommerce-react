@@ -14,7 +14,7 @@
 }
 
 .item img {
-  object-fit: fill;
+  object-fit: cover;
   width: 304px;
   height: 488px;
   transition: 0.6s ease-in;

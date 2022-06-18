@@ -1,10 +1,10 @@
 import { useRef } from "react";
 
-import classes from "./produtosOrder.module.css";
+import classes from "./produtoOrder.module.css";
 
 const isNotEmpty = (value) => value.trim() !== "";
 
-const ProdutosOrder = (props) => {
+const ProdutoOrder = (props) => {
   const sizeInputRef = useRef("");
   const quantityInputRef = useRef("");
 
@@ -38,12 +38,12 @@ const ProdutosOrder = (props) => {
   };
 
   return (
-    <section className={classes.produtosOrderWrapper}>
+    <section className={classes.produtoOrderWrapper}>
       <img src={props.img} alt={props.name} />
-      <div className={classes.produtosInfo}>
+      <div className={classes.produtoInfo}>
         <h1>{props.name}</h1>
         <p>{props.description}</p>
-        <div className={classes.produtosActions}>
+        <div className={classes.produtoActions}>
           {props.sizes && (
             <div className={classes.selectInput}>
               <label htmlFor="size">Tamanho</label>
@@ -81,4 +81,4 @@ const ProdutosOrder = (props) => {
   );
 };
 
-export default ProdutosOrder;
+export default ProdutoOrder;

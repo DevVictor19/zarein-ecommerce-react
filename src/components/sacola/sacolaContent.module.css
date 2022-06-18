@@ -1,0 +1,143 @@
+.emptyBag {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 408px;
+}
+
+.emptyBag h1 {
+  font-weight: 300;
+  font-size: 68px;
+  line-height: 80px;
+  color: var(--black);
+}
+
+.emptyBag a {
+  display: inline-block;
+  padding: 20px 0;
+  margin-top: 56px;
+
+  width: 320px;
+  height: 88px;
+  text-decoration: none;
+  color: #fff;
+  background-color: var(--black);
+
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 40px;
+}
+
+.bagDisplay h1 {
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 56px;
+  color: var(--black);
+}
+
+.bagDisplay p {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 40px;
+  color: var(--black-75);
+  margin-top: 16px;
+}
+
+.actions {
+  margin-top: 24px;
+}
+
+.actions button {
+  width: 295px;
+  height: 88px;
+  font-family: "Quicksand";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 40px;
+  cursor: pointer;
+}
+.actions button:first-child {
+  background-color: var(--black);
+  color: #fff;
+  border: none;
+  margin-right: 24px;
+}
+
+.actions button:last-child {
+  background-color: var(--black-10);
+  border: none;
+  color: var(--black);
+}
+
+.items {
+  margin-top: 40px;
+}
+
+.item {
+  display: flex;
+  border-top: 1px solid var(--black);
+  padding-top: 24px;
+  margin-bottom: 32px;
+}
+
+.item img {
+  width: 200px;
+  height: 244px;
+  object-fit: cover;
+  margin-right: 16px;
+}
+
+.itemDisplay h1 {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 40px;
+  color: var(--black);
+}
+
+.displayInfo {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.displayInfo h2 {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40px;
+  color: var(--black-75);
+  margin-right: 24px;
+}
+
+.displayInfo p {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40px;
+  color: var(--black-75);
+}
+
+.displayActions {
+  margin-top: 56px;
+}
+
+.displayActions button {
+  width: 80px;
+  height: 80px;
+  font-family: "Raleway";
+  font-weight: 200;
+  font-size: 96px;
+  line-height: 60px;
+  cursor: pointer;
+  border: none;
+}
+
+.displayActions button:first-child {
+  background-color: var(--black);
+  margin-right: 24px;
+  color: #fff;
+}
+
+.displayActions button:last-child {
+  background-color: var(--black-10);
+  color: var(--black);
+}

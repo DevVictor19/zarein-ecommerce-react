@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 import classes from "./header.module.css";
 import sacolaico from "../../assets/sacola-ico.png";
@@ -44,7 +44,9 @@ const Header = () => {
         </div>
 
         <div className={classes.sacolaIco}>
-          <img src={sacolaico} alt="uma sacola simples" />
+          <Link to="sacola">
+            <img src={sacolaico} alt="uma sacola simples" />
+          </Link>
         </div>
         <div className={classes.sacolaDisplay}>3</div>
       </div>

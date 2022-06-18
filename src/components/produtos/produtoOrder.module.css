@@ -1,27 +1,28 @@
-.produtosOrderWrapper {
+.produtoOrderWrapper {
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
-.produtosOrderWrapper img {
-  height: 512px;
-  width: 400px;
-  object-fit: contain;
+.produtoOrderWrapper img {
+  height: 590px;
+  width: 600px;
+  object-fit: cover;
 }
 
-.produtosInfo {
-  max-width: 928px;
+.produtoInfo {
+  max-width: 568px;
   margin-left: 108px;
 }
 
-.produtosInfo h1 {
+.produtoInfo h1 {
   font-weight: 300;
   font-size: 64px;
-  letter-spacing: 8px;
+  letter-spacing: 2px;
   color: var(--black);
 }
 
-.produtosInfo p {
+.produtoInfo p {
   font-weight: 400;
   font-size: 24px;
   line-height: 40px;
@@ -30,7 +31,7 @@
   margin-top: 16px;
 }
 
-.produtosInfo h2 {
+.produtoInfo h2 {
   font-weight: 500;
   font-size: 48px;
   line-height: 56px;
@@ -38,7 +39,7 @@
   margin-top: 24px;
 }
 
-.produtosInfo button {
+.produtoInfo button {
   width: 295px;
   height: 88px;
   background-color: var(--black-25);
@@ -54,14 +55,14 @@
   cursor: pointer;
 }
 
-.produtosActions {
+.produtoActions {
   display: flex;
   align-items: center;
 
   margin-top: 24px;
 }
 
-.produtosActions label {
+.produtoActions label {
   font-weight: 500;
   font-size: 24px;
   line-height: 28px;
@@ -69,7 +70,7 @@
   margin-bottom: 8px;
 }
 
-.produtosActions div {
+.produtoActions div {
   display: flex;
   flex-direction: column;
 
@@ -78,7 +79,7 @@
   line-height: 24px;
 }
 
-.produtosActions select {
+.produtoActions select {
   width: 295px;
   height: 88.69px;
   background: var(--black-5);
@@ -88,7 +89,7 @@
   color: var(--black-75);
 }
 
-.produtosActions input {
+.produtoActions input {
   width: 160px;
   height: 89px;
   background: var(--black-5);

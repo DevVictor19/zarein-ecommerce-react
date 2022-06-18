@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import classes from "./produtosMenu.module.css";
+import classes from "./produtoMenu.module.css";
 
 const ProdutosMenu = (props) => {
   return (
