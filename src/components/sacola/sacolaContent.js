@@ -1,10 +1,16 @@
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux/es/exports";
+import { useSelector, useDispatch } from "react-redux/es/exports";
+import { clearBag, addOne, removeOne } from "../../store/actions/";
 
 import classes from "./sacolaContent.module.css";
 
 const SacolaContent = () => {
   const data = useSelector((state) => state.bag);
+  const dispatch = useDispatch();
+
+  const clearBagHandler = () => {
+    dispatch(clearBag());
+  };
 
   if (data.items.length === 0) {
     return (
@@ -22,7 +28,7 @@ const SacolaContent = () => {
         <p>Total de Unidades: {data.totalItems}</p>
         <div className={classes.actions}>
           <button>Finalizar Pedido</button>
-          <button>Esvaziar Sacola</button>
+          <button onClick={clearBagHandler}>Esvaziar Sacola</button>
         </div>
       </div>
       <section className={classes.items}>
@@ -35,11 +41,15 @@ const SacolaContent = () => {
               </h1>
               <div className={classes.displayInfo}>
                 <h2>Unidades: {item.quantity}</h2>
-                <p>R$:{item.price}</p>
+                <p>R$:{item.price.toFixed(2)}</p>
               </div>
               <div className={classes.displayActions}>
-                <button>+</button>
-                <button>-</button>
+                <button onClick={() => dispatch(addOne(item.id, item.size))}>
+                  +
+                </button>
+                <button onClick={() => dispatch(removeOne(item.id, item.size))}>
+                  -
+                </button>
               </div>
             </div>
           </div>

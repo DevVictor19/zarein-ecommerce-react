@@ -39,8 +39,6 @@ const ProdutoOrder = (props) => {
     };
 
     dispatch(addItem(order));
-
-    console.log(order);
   };
 
   return (
