@@ -5,7 +5,6 @@ import classes from "./sacolaContent.module.css";
 
 const SacolaContent = () => {
   const data = useSelector((state) => state.bag);
-  console.log(data);
 
   if (data.items.length === 0) {
     return (

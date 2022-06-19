@@ -7,23 +7,22 @@ const initialState = {
 const rootReducer = (state = initialState, action) => {
   if (action.type === c.ADD_ITEM) {
     const enteredProduct = action.payload;
+    const bagItems = state.bag.items;
 
     let existingProduct = null;
 
     if (enteredProduct.size) {
-      existingProduct = state.bag.items.find((item) => {
+      existingProduct = bagItems.find((item) => {
         return (
           item.id === enteredProduct.id && item.size === enteredProduct.size
         );
       });
     } else {
-      existingProduct = state.bag.items.find(
-        (item) => item.id === enteredProduct.id
-      );
+      existingProduct = bagItems.find((item) => item.id === enteredProduct.id);
     }
 
     if (existingProduct) {
-      const indexOf_existingProduct = state.bag.items.indexOf(existingProduct);
+      const indexOf_existingProduct = bagItems.indexOf(existingProduct);
       const updated_existingProduct = {
         ...existingProduct,
         price:
@@ -31,7 +30,9 @@ const rootReducer = (state = initialState, action) => {
           enteredProduct.price * enteredProduct.quantity,
         quantity: existingProduct.quantity + enteredProduct.quantity,
       };
-      state.bag.items[indexOf_existingProduct] = updated_existingProduct;
+
+      const updated_bagItems = [...bagItems];
+      updated_bagItems[indexOf_existingProduct] = updated_existingProduct;
 
       return {
         ...state,
@@ -40,7 +41,7 @@ const rootReducer = (state = initialState, action) => {
           totalAmount:
             state.bag.totalAmount +
             enteredProduct.price * enteredProduct.quantity,
-          items: [...state.bag.items],
+          items: [...updated_bagItems],
         },
       };
     }
