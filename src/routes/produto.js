@@ -2,8 +2,8 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import { getProductsById } from "../data/products";
-import ProdutosMenu from "../components/produtos/produtoMenu";
-import ProdutosOrder from "../components/produtos/produtoOrder";
+import ProdutosMenu from "../components/produto/produtoMenu";
+import ProdutosOrder from "../components/produto/produtoOrder";
 import FadeInMain from "../components/UI/fadeInMain";
 
 const Produto = () => {

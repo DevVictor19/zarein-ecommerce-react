@@ -1,10 +1,14 @@
 import { useRef } from "react";
+import { useDispatch } from "react-redux/es/exports";
+import { addItem } from "../../store/actions";
 
 import classes from "./produtoOrder.module.css";
 
 const isNotEmpty = (value) => value.trim() !== "";
 
 const ProdutoOrder = (props) => {
+  const dispatch = useDispatch();
+
   const sizeInputRef = useRef("");
   const quantityInputRef = useRef("");
 
@@ -31,8 +35,10 @@ const ProdutoOrder = (props) => {
       price: props.price,
       id: props.id,
       size: enteredSize || null,
-      quantity: enteredQuantity,
+      quantity: +enteredQuantity,
     };
+
+    dispatch(addItem(order));
 
     console.log(order);
   };
