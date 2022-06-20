@@ -1,11 +1,19 @@
 import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux/es/exports";
+import { hideNotification } from "../../store/actions";
 
 import classes from "./notification.module.css";
 
 const Notification = () => {
   const notification = useSelector((state) => state.notification);
+  const dispatch = useDispatch();
+
+  const onClickNotification = () => {
+    dispatch(hideNotification());
+  };
+
   let notificationClass = classes.notificationHide;
 
   if (notification.show) {
@@ -13,7 +21,10 @@ const Notification = () => {
   }
 
   return (
-    <div className={`${classes.notification} ${notificationClass}`}>
+    <div
+      onClick={onClickNotification}
+      className={`${classes.notification} ${notificationClass}`}
+    >
       <div className={classes.title}>
         <h1>{notification.title}</h1>
       </div>
