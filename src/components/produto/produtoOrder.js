@@ -1,6 +1,10 @@
 import { useRef } from "react";
 import { useDispatch } from "react-redux/es/exports";
-import { addItem } from "../../store/actions";
+import {
+  addItem,
+  hideNotification,
+  showNotification,
+} from "../../store/actions";
 
 import classes from "./produtoOrder.module.css";
 
@@ -25,7 +29,16 @@ const ProdutoOrder = (props) => {
     }
 
     if (!formIsValid) {
-      console.log("formulario inválido");
+      dispatch(
+        showNotification({
+          title: "Campos inválidos",
+          message:
+            "Antes de inserir algum item na sacola, insira a unidade e o tamanho desejado",
+        })
+      );
+      setTimeout(() => {
+        dispatch(hideNotification());
+      }, 5000);
       return;
     }
 
@@ -39,6 +52,18 @@ const ProdutoOrder = (props) => {
     };
 
     dispatch(addItem(order));
+
+    dispatch(
+      showNotification({
+        title: "item inserido na sacola",
+        link: true,
+        linkPath: "sacola",
+        linkText: "Ver sacola",
+      })
+    );
+    setTimeout(() => {
+      dispatch(hideNotification());
+    }, 5000);
   };
 
   return (

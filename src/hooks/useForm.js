@@ -12,6 +12,11 @@ const useForm = (validationFn) => {
     setWasTouched(true);
   };
 
+  const reset = () => {
+    setInputValue("");
+    setWasTouched(false);
+  };
+
   const validation = validationFn(inputValue);
   const hasError = !validation && wasTouched;
   const isValid = validation && !hasError;
@@ -22,6 +27,7 @@ const useForm = (validationFn) => {
     hasError,
     onChangeHandler,
     onBlurHandler,
+    reset,
   };
 };
 

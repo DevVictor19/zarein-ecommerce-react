@@ -1,4 +1,6 @@
 import useForm from "../../hooks/useForm";
+import { useDispatch } from "react-redux/es/exports";
+import { showNotification, hideNotification } from "../../store/actions";
 
 import classes from "./contatoForm.module.css";
 
@@ -11,12 +13,15 @@ const messageIsBigEnough = (message) => {
 };
 
 const ContatoForm = () => {
+  const dispatch = useDispatch();
+
   const {
     inputValue: nameInputValue,
     isValid: nameIsValid,
     hasError: nameHasError,
     onChangeHandler: nameOnChangeHandler,
     onBlurHandler: nameOnBlurHandler,
+    reset: resetNameInput,
   } = useForm(fieldIsNotEmpty);
 
   const {
@@ -25,6 +30,7 @@ const ContatoForm = () => {
     hasError: emailHasError,
     onChangeHandler: emailOnChangeHandler,
     onBlurHandler: emailOnBlurHandler,
+    reset: resetEmailInput,
   } = useForm(fieldIsNotEmpty);
 
   const {
@@ -33,6 +39,7 @@ const ContatoForm = () => {
     hasError: subjectHasError,
     onChangeHandler: subjectOnChangeHandler,
     onBlurHandler: subjectOnBlurHandler,
+    reset: resetSubjectInput,
   } = useForm(fieldIsNotEmpty);
 
   const {
@@ -41,6 +48,7 @@ const ContatoForm = () => {
     hasError: messageHasError,
     onChangeHandler: messageOnChangeHandler,
     onBlurHandler: messageOnBlurHandler,
+    reset: resetMessageInput,
   } = useForm(messageIsBigEnough);
 
   const inputsErrorMessage = "não pode ficar vázio!";
@@ -53,10 +61,28 @@ const ContatoForm = () => {
     event.preventDefault();
 
     if (!formIsValid) {
-      // disparar notificacao de error
+      dispatch(
+        showNotification({
+          title: "Campos Inválidos",
+          message:
+            "Tenha certeza de inserir todos o valores corretamente no formulário",
+        })
+      );
+      setTimeout(() => {
+        dispatch(hideNotification());
+      }, 5000);
       return;
     }
-    // disparar notificacao de mensagem enviada
+
+    dispatch(
+      showNotification({
+        title: "Mensagem Enviada!",
+        message: "Aguarde o nosso feedback pelo e-mail",
+      })
+    );
+    setTimeout(() => {
+      dispatch(hideNotification());
+    }, 5000);
 
     const formMessageData = {
       name: nameInputValue,
@@ -66,6 +92,11 @@ const ContatoForm = () => {
     };
 
     console.log(formMessageData);
+
+    resetNameInput();
+    resetEmailInput();
+    resetSubjectInput();
+    resetMessageInput();
   };
 
   return (
@@ -75,6 +106,7 @@ const ContatoForm = () => {
       </label>
       <input
         type="text"
+        value={nameInputValue}
         onChange={nameOnChangeHandler}
         onBlur={nameOnBlurHandler}
         className={nameHasError ? classes.error : ""}
@@ -86,6 +118,7 @@ const ContatoForm = () => {
       </label>
       <input
         type="email"
+        value={emailInputValue}
         onChange={emailOnChangeHandler}
         onBlur={emailOnBlurHandler}
         className={emailHasError ? classes.error : ""}
@@ -97,6 +130,7 @@ const ContatoForm = () => {
       </label>
       <input
         type="text"
+        value={subjectInputValue}
         onChange={subjectOnChangeHandler}
         onBlur={subjectOnBlurHandler}
         className={subjectHasError ? classes.error : ""}
@@ -108,6 +142,7 @@ const ContatoForm = () => {
       </label>
       <textarea
         onChange={messageOnChangeHandler}
+        value={messageInputValue}
         onBlur={messageOnBlurHandler}
         className={messageHasError ? classes.error : ""}
         id="textarea"

@@ -15,3 +15,11 @@ export const addOne = (id, size) => {
 export const removeOne = (id, size) => {
   return { type: c.REMOVE_ONE, payload: { id, size } };
 };
+
+export const showNotification = (config) => {
+  return { type: c.SHOW_NOTIFICATION, payload: config };
+};
+
+export const hideNotification = () => {
+  return { type: c.HIDE_NOTIFICATION, payload: null };
+};

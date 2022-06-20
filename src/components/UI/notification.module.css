@@ -1,0 +1,60 @@
+.notification {
+  position: fixed;
+  left: 10px;
+
+  width: 520px;
+  height: 168px;
+  z-index: 10;
+
+  background-color: #ddd;
+  border-radius: 4px;
+  border: 1px solid var(--black-50);
+}
+
+.notificationShow {
+  top: 10px;
+  transition: 1.2s ease-in;
+}
+
+.notificationHide {
+  top: -100%;
+  transition: 3s ease-out;
+}
+
+.title {
+  border-bottom: 1px solid var(--black-50);
+}
+
+.title h1 {
+  padding: 10px;
+
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: var(--black);
+}
+
+.info {
+  width: 100%;
+  padding: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info a {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--black-75);
+  text-decoration: underline 2px solid var(--black-50);
+}
+
+.info p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--black-75);
+}

@@ -36,6 +36,12 @@
   border: 1px solid var(--black-25);
   border-radius: 4px;
 
+  font-family: "Raleway";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 40px;
+  color: var(--black);
+
   resize: none;
   width: 648px;
   height: 136px;
