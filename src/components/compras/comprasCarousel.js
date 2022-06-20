@@ -26,17 +26,12 @@ const transitionStyles = {
 
 const ComprasCarousel = (props) => {
   const [isVisible, setIsVisible] = useState(false);
-  const carouselRef = useRef("");
 
   const { filter, products, isFirstRender } = props;
 
   const [currentProducts, setCurrentProducts] = useState(
     getFilteredProducts(products, filter)
   );
-
-  const scroll = (scrollOffset) => {
-    carouselRef.current.scrollLeft += scrollOffset;
-  };
 
   useEffect(() => {
     if (isFirstRender) {
@@ -56,6 +51,12 @@ const ComprasCarousel = (props) => {
       clearTimeout(fadeInUpdatedProducts);
     };
   }, [filter, isFirstRender, products]);
+
+  const carouselRef = useRef("");
+
+  const scroll = (scrollOffset) => {
+    carouselRef.current.scrollLeft += scrollOffset;
+  };
 
   let content = (
     <>

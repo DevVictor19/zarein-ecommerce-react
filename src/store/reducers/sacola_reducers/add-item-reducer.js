@@ -1,21 +1,21 @@
 function ADD_ITEM_REDUCER(state, action) {
   const enteredProduct = action.payload;
-  const state_items = state.bag.items;
+  const bagState = state.bag;
 
   let existingProduct = null;
 
   if (enteredProduct.size) {
-    existingProduct = state_items.find((item) => {
+    existingProduct = bagState.items.find((item) => {
       return item.id === enteredProduct.id && item.size === enteredProduct.size;
     });
   } else {
-    existingProduct = state_items.find((item) => {
+    existingProduct = bagState.items.find((item) => {
       return item.id === enteredProduct.id;
     });
   }
 
   if (existingProduct) {
-    const indexOf_existingProduct = state_items.indexOf(existingProduct);
+    const indexOf_existingProduct = bagState.items.indexOf(existingProduct);
 
     const updated_existingProduct = {
       ...existingProduct,
@@ -24,17 +24,16 @@ function ADD_ITEM_REDUCER(state, action) {
       quantity: existingProduct.quantity + enteredProduct.quantity,
     };
 
-    const updated_state_items = [...state_items];
-    updated_state_items[indexOf_existingProduct] = updated_existingProduct;
+    const copyOfBagStateItems = [...bagState.items];
+    copyOfBagStateItems[indexOf_existingProduct] = updated_existingProduct;
 
     return {
       ...state,
       bag: {
-        totalItems: state.bag.totalItems + enteredProduct.quantity,
+        totalItems: bagState.totalItems + enteredProduct.quantity,
         totalAmount:
-          state.bag.totalAmount +
-          enteredProduct.price * enteredProduct.quantity,
-        items: [...updated_state_items],
+          bagState.totalAmount + enteredProduct.price * enteredProduct.quantity,
+        items: [...copyOfBagStateItems],
       },
     };
   }
@@ -47,10 +46,10 @@ function ADD_ITEM_REDUCER(state, action) {
   return {
     ...state,
     bag: {
-      totalItems: state.bag.totalItems + action.payload.quantity,
+      totalItems: bagState.totalItems + enteredProduct.quantity,
       totalAmount:
-        state.bag.totalAmount + action.payload.price * action.payload.quantity,
-      items: state.bag.items.concat(newProduct),
+        bagState.totalAmount + enteredProduct.price * enteredProduct.quantity,
+      items: bagState.items.concat(newProduct),
     },
   };
 }

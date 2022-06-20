@@ -5,7 +5,7 @@ import classes from "./header.module.css";
 import sacolaico from "../../assets/sacola-ico.png";
 
 const Header = () => {
-  const bagContext = useSelector((state) => state.bag);
+  const totalItems = useSelector((state) => state.bag.totalItems);
 
   const activeClassStyle = {
     borderBottom: "1px solid var(--black-75)",
@@ -51,7 +51,7 @@ const Header = () => {
             <img src={sacolaico} alt="uma sacola simples" />
           </Link>
         </div>
-        <div className={classes.sacolaDisplay}>{bagContext.totalItems}</div>
+        <div className={classes.sacolaDisplay}>{totalItems}</div>
       </div>
     </header>
   );

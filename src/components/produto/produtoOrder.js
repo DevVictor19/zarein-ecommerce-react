@@ -55,7 +55,7 @@ const ProdutoOrder = (props) => {
 
     dispatch(
       showNotification({
-        title: "item inserido na sacola",
+        title: "Item inserido na sacola",
         link: true,
         linkPath: "sacola",
         linkText: "Ver sacola",

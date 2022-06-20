@@ -1,18 +1,41 @@
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux/es/exports";
-import { clearBag, addOne, removeOne } from "../../store/actions/";
+import {
+  clearBag,
+  addOne,
+  removeOne,
+  showNotification,
+  hideNotification,
+} from "../../store/actions/";
 
 import classes from "./sacolaContent.module.css";
 
 const SacolaContent = () => {
-  const data = useSelector((state) => state.bag);
+  const bag = useSelector((state) => state.bag);
   const dispatch = useDispatch();
 
   const clearBagHandler = () => {
     dispatch(clearBag());
   };
 
-  if (data.items.length === 0) {
+  const submitOrder = () => {
+    dispatch(
+      showNotification({
+        title: "Concluído!",
+        message: "Pedido realizado com sucesso",
+      })
+    );
+    setTimeout(() => {
+      dispatch(hideNotification());
+    }, 5000);
+
+    const order = { ...bag };
+    console.log(order);
+
+    dispatch(clearBag());
+  };
+
+  if (bag.items.length === 0) {
     return (
       <section className={classes.emptyBag}>
         <h1>Não há produtos na sua sacola</h1>
@@ -24,15 +47,15 @@ const SacolaContent = () => {
   return (
     <section>
       <div className={classes.bagDisplay}>
-        <h1>Total: R${data.totalAmount.toFixed(2)}</h1>
-        <p>Total de Unidades: {data.totalItems}</p>
+        <h1>Total: R${bag.totalAmount.toFixed(2)}</h1>
+        <p>Total de Unidades: {bag.totalItems}</p>
         <div className={classes.actions}>
-          <button>Finalizar Pedido</button>
+          <button onClick={submitOrder}>Finalizar Pedido</button>
           <button onClick={clearBagHandler}>Esvaziar Sacola</button>
         </div>
       </div>
       <section className={classes.items}>
-        {data.items.map((item) => (
+        {bag.items.map((item) => (
           <div key={`${item.id} ${item.size}`} className={classes.item}>
             <img src={item.img} alt={item.name} />
             <div className={classes.itemDisplay}>

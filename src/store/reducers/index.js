@@ -20,31 +20,28 @@ const initialState = {
 };
 
 const rootReducer = (state = initialState, action) => {
-  if (action.type === c.ADD_ITEM) {
-    return ADD_ITEM_REDUCER(state, action);
-  }
+  switch (action.type) {
+    case c.ADD_ITEM:
+      return ADD_ITEM_REDUCER(state, action);
 
-  if (action.type === c.CLEAR_ITEMS) {
-    return CLEAR_ITEMS_REDUCER(state);
-  }
+    case c.CLEAR_ITEMS:
+      return CLEAR_ITEMS_REDUCER(state);
 
-  if (action.type === c.ADD_ONE) {
-    return ADD_ONE_REDUCER(state, action);
-  }
+    case c.ADD_ONE:
+      return ADD_ONE_REDUCER(state, action);
 
-  if (action.type === c.REMOVE_ONE) {
-    return REMOVE_ONE_REDUCER(state, action);
-  }
+    case c.REMOVE_ONE:
+      return REMOVE_ONE_REDUCER(state, action);
 
-  if (action.type === c.SHOW_NOTIFICATION) {
-    return SHOW_NOTIFICATION_REDUCER(state, action);
-  }
+    case c.SHOW_NOTIFICATION:
+      return SHOW_NOTIFICATION_REDUCER(state, action);
 
-  if (action.type === c.HIDE_NOTIFICATION) {
-    return HIDE_NOTIFICATION_REDUCER(state);
-  }
+    case c.HIDE_NOTIFICATION:
+      return HIDE_NOTIFICATION_REDUCER(state);
 
-  return state;
+    default:
+      return state;
+  }
 };
 
 export default rootReducer;
