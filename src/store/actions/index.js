@@ -5,7 +5,7 @@ export const addItem = (item) => {
 };
 
 export const clearBag = () => {
-  return { type: c.CLEAR_BAG, payload: null };
+  return { type: c.CLEAR_ITEMS, payload: null };
 };
 
 export const addOne = (id, size) => {
