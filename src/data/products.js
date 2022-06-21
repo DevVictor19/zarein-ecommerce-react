@@ -227,7 +227,7 @@ const products = [
         promocao: false,
       },
       {
-        name: "Simples Modernidade",
+        name: "Modernidade",
         id: "c2",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
@@ -256,6 +256,61 @@ const products = [
         img: images["PerolaMarinha.png"],
         sizes: ["34", "35", "36", "37", "38", "39"],
         price: 231.12,
+        populares: true,
+        promocao: true,
+      },
+      {
+        name: "Tardes Praianas",
+        id: "c5",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
+        img: images["TardesPraianas.png"],
+        sizes: ["34", "35", "36", "37", "38", "39"],
+        price: 123.2,
+        populares: false,
+        promocao: false,
+      },
+      {
+        name: "Lagoa Azul",
+        id: "c6",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
+        img: images["LagoaAzul.png"],
+        sizes: ["34", "35", "36", "37", "38", "39"],
+        price: 167.23,
+        populares: false,
+        promocao: false,
+      },
+      {
+        name: "Capim do Campo",
+        id: "c7",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
+        img: images["CapimDoCampo.png"],
+        sizes: ["34", "35", "36", "37", "38", "39"],
+        price: 237.83,
+        populares: false,
+        promocao: false,
+      },
+      {
+        name: "Pedras Vulcânicas",
+        id: "c8",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
+        img: images["PedrasVulcanicas.png"],
+        sizes: ["34", "35", "36", "37", "38", "39"],
+        price: 298.13,
+        populares: true,
+        promocao: false,
+      },
+      {
+        name: "Folhas do Outono",
+        id: "c9",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
+        img: images["FolhasDoOutono.png"],
+        sizes: ["34", "35", "36", "37", "38", "39"],
+        price: 353.29,
         populares: true,
         promocao: true,
       },
@@ -320,6 +375,50 @@ const products = [
         populares: true,
         promocao: false,
       },
+      {
+        name: "Lápis-Lazúli",
+        id: "a6",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
+        img: images["LapisLazuli.png"],
+        sizes: null,
+        price: 131.19,
+        populares: true,
+        promocao: false,
+      },
+      {
+        name: "Luxo da Floresta",
+        id: "a7",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
+        img: images["LuxoDaFloresta.png"],
+        sizes: null,
+        price: 247.31,
+        populares: true,
+        promocao: true,
+      },
+      {
+        name: "Luxo do Outono",
+        id: "a8",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
+        img: images["LuxoDoOutono.png"],
+        sizes: null,
+        price: 324.49,
+        populares: true,
+        promocao: false,
+      },
+      {
+        name: "Tardes Serenas",
+        id: "a9",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit ipsum est, ut euismod felis ullamcorper a. Nulla facilisi. Nulla mollis efficitur lectus. ",
+        img: images["TardesSerenas.png"],
+        sizes: null,
+        price: 134.49,
+        populares: false,
+        promocao: false,
+      },
     ],
   },
 ];
@@ -327,13 +426,13 @@ const products = [
 export const getProducts = () => products;
 
 export const getProductsById = (id) => {
-  const array_of_arrays_SectionProducts = products.map(
+  const arrayOfSectionProductsArrays = products.map(
     (sectionObj) => sectionObj.sectionProducts
   );
 
   let filteredItem = null;
 
-  array_of_arrays_SectionProducts.forEach((arrayOfproducts) => {
+  arrayOfSectionProductsArrays.forEach((arrayOfproducts) => {
     arrayOfproducts.forEach((item) => {
       if (item.id === id) {
         filteredItem = item;
