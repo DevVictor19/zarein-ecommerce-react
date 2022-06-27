@@ -5,52 +5,52 @@
   padding-top: 22px;
 }
 
-.wrapper {
-  position: relative;
+.headerContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 64px;
+
+  padding: 0 64px;
 }
 
-.navWrapper {
-  width: 923px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
+.headerContainer h1 {
   font-weight: 300;
-  font-size: 72px;
+  font-size: 68px;
   line-height: 80px;
   color: var(--black);
 }
 
-.nav ul {
+.desktopNavContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 196px;
+}
+
+.desktopNavContainer ul {
   display: flex;
   align-items: center;
 }
 
-.nav ul li a {
-  text-decoration: none;
-  color: var(--black);
-  font-family: "Quicksand";
-  font-weight: 400;
-  font-size: 24px;
+.desktopNavContainer ul li {
   margin-right: 48px;
 }
 
-.nav ul li:last-child a {
-  margin-right: 0;
+.desktopNavContainer ul a {
+  text-decoration: none;
+  font-family: "Quicksand";
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 40px;
+  color: var(--black);
 }
 
-.sacolaIco {
-  cursor: pointer;
+.bagItemsContainer {
+  position: relative;
 }
 
-.sacolaDisplay {
+.bagItemsCounter {
   position: absolute;
   top: 0;
   right: 0;

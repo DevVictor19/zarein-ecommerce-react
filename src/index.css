@@ -21,5 +21,24 @@ body {
   font-family: "Raleway", sans-serif;
   max-width: 1820px;
   margin: 0 auto;
-  user-select: n;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--black-5);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--black-50);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--black-75);
 }

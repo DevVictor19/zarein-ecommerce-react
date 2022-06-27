@@ -1,4 +1,4 @@
-import classes from "./fadeIn.module.css";
+import classes from "./fadeInMain.module.css";
 
 const FadeInMain = (props) => {
   return (
