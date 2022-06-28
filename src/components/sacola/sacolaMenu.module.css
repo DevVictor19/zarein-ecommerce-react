@@ -9,3 +9,13 @@
   line-height: 40px;
   color: var(--black-75);
 }
+
+@media screen and (max-width: 480px) {
+  .menu {
+    padding: 40px 32px;
+  }
+
+  .menu h1 {
+    font-size: 18px;
+  }
+}

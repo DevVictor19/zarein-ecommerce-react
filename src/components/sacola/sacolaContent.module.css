@@ -25,8 +25,12 @@
   font-family: "Quicksand";
   font-style: normal;
   font-weight: 400;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 40px;
+}
+
+.bagWrapper {
+  padding: 88px 64px 344px;
 }
 
 .bagDisplay h1 {
@@ -45,6 +49,10 @@
 }
 
 .actions {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
   margin-top: 24px;
 }
 
@@ -90,7 +98,7 @@
 
 .itemDisplay h1 {
   font-weight: 500;
-  font-size: 34px;
+  font-size: 32px;
   line-height: 40px;
   color: var(--black);
 }
@@ -146,16 +154,79 @@
   .emptyBag h1 {
     font-size: 56px;
   }
+
+  .actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .actions button:first-child {
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
+}
+
+@media screen and (max-width: 695px) {
+  .displayInfo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .displayActions {
+    margin-top: 24px;
+  }
 }
 
 @media screen and (max-width: 628px) {
   .emptyBag h1 {
     font-size: 48px;
   }
+
+  .item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .itemDisplay {
+    width: 100%;
+  }
+
+  .item img {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
 }
 
 @media screen and (max-width: 480px) {
   .emptyBag {
     padding: 88px 32px;
+  }
+
+  .bagWrapper {
+    padding: 88px 32px 344px;
+  }
+
+  .emptyBag h1 {
+    font-size: 32px;
+  }
+
+  .emptyBag a {
+    width: 100%;
+  }
+
+  .actions button {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .bagDisplay h1 {
+    font-size: 32px;
+  }
+
+  .bagDisplay p,
+  .displayInfo h2,
+  .displayInfo p {
+    font-size: 24px;
   }
 }
