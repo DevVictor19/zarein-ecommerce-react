@@ -78,8 +78,28 @@
   }
 }
 
+@media screen and (max-width: 650px) {
+  .carouselEmpty h2 {
+    font-size: 48px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .carouselEmpty h2 {
+    margin-top: 164px;
+    font-size: 40px;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .carouselSectionWrapper {
     margin: 0 32px 88px;
+  }
+}
+
+@media screen and (max-width: 385px) {
+  .carouselEmpty h2 {
+    font-size: 32px;
+    line-height: 56px;
   }
 }
