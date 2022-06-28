@@ -1,0 +1,39 @@
+.bagItemsContainer {
+  position: fixed;
+  right: 64px;
+  bottom: 16px;
+  display: none;
+
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid var(--black-25);
+  z-index: 98;
+  text-align: center;
+  padding-top: 4px;
+}
+
+.bagItemsCounter {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  padding-top: 5px;
+
+  background-color: #d9d9d9;
+  color: var(--black);
+
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .bagItemsContainer {
+    display: inline-block;
+  }
+}

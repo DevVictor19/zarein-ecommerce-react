@@ -4,6 +4,7 @@
   align-items: center;
 
   padding-top: 24px;
+  text-align: center;
   padding-bottom: 40px;
 }
 
@@ -60,5 +61,37 @@ div.footerIcons a:nth-child(2) {
 
   .footerWrapper p {
     font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .footerWrapper h1 {
+    font-size: 48px;
+  }
+
+  div.footerIcons a:nth-child(1) img {
+    width: 58px;
+  }
+
+  div.footerIcons a:nth-child(2) img {
+    width: 50px;
+  }
+
+  div.footerIcons a:nth-child(3) img {
+    width: 62px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footerWrapper h1 {
+    font-size: 40px;
+  }
+
+  .footerIcons {
+    flex-direction: column;
+  }
+
+  div.footerIcons a:nth-child(2) {
+    margin: 64px 0;
   }
 }

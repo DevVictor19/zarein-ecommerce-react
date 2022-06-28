@@ -22,11 +22,9 @@ const Header = () => {
         <div className={classes.desktopNavContainer}>
           <NavigationLinks />
           <div className={classes.bagItemsContainer}>
-            <div>
-              <Link to="sacola">
-                <img src={sacolaico} alt="uma sacola simples" />
-              </Link>
-            </div>
+            <Link to="sacola">
+              <img src={sacolaico} alt="uma sacola simples" />
+            </Link>
             <div className={classes.bagItemsCounter}>{totalItems}</div>
           </div>
         </div>
