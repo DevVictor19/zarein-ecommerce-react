@@ -58,3 +58,11 @@
   line-height: 28px;
   color: var(--black-75);
 }
+
+@media screen and (max-width: 600px) {
+  .notification {
+    width: 80%;
+    min-height: 168px;
+    height: auto;
+  }
+}
