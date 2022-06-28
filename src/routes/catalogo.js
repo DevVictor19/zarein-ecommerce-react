@@ -6,7 +6,7 @@ const Catalogo = () => {
   const posts = getPosts();
 
   return (
-    <FadeInMain style={{ padding: "88px 64px" }}>
+    <FadeInMain>
       {posts.map((post) => (
         <CatalogoPost
           key={post.post_id}
