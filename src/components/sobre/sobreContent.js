@@ -3,7 +3,7 @@ import classes from "./sobreContent.module.css";
 
 const SobreContent = () => {
   return (
-    <section>
+    <section className={classes.sobreWrapper}>
       <div className={classes.mainContent}>
         <img src={sobre_img} alt="Casa em meio a natureza" />
         <div>

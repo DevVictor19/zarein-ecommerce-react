@@ -3,7 +3,7 @@ import FadeInMain from "../components/UI/fadeInMain";
 
 const Sobre = () => {
   return (
-    <FadeInMain style={{ padding: "88px 64px" }}>
+    <FadeInMain>
       <SobreContent />
     </FadeInMain>
   );

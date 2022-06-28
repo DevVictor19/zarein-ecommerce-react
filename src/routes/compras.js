@@ -10,8 +10,6 @@ const Compras = () => {
   const [currentFilter, setCurrentFilter] = useState("todos");
   const [firstRender, setFirstRender] = useState(true);
 
-  //style={{ padding: "88px 64px 0" }}
-
   const onClickFilterLink = (filter) => {
     if (filter === currentFilter) {
       return;
