@@ -1,6 +1,7 @@
 .contato {
   display: flex;
   justify-content: center;
+  padding: 128px 64px 88px;
 }
 
 .contatoTexts {
@@ -22,4 +23,45 @@
   font-size: 24px;
   line-height: 28px;
   color: var(--black-75);
+}
+
+@media screen and (max-width: 1440px) {
+  .contatoTexts {
+    margin-left: 112px;
+  }
+
+  .contatoTexts h1 {
+    font-size: 40px;
+  }
+
+  .contatoTexts p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .contato {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contatoTexts {
+    order: 1;
+    margin: 0 0 88px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contato {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .contatoTexts h1 {
+    font-size: 32px;
+  }
+
+  .contatoTexts p {
+    font-size: 16px;
+  }
 }
