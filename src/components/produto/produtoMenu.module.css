@@ -23,3 +23,9 @@
 .menuDisplay div {
   margin: 0 6px;
 }
+
+@media screen and (max-width: 480px) {
+  .menuWrapper {
+    padding: 40px 32px;
+  }
+}

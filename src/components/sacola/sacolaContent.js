@@ -45,7 +45,7 @@ const SacolaContent = () => {
   }
 
   return (
-    <section>
+    <section className={classes.bagWrapper}>
       <div className={classes.bagDisplay}>
         <h1>Total: R${bag.totalAmount.toFixed(2)}</h1>
         <p>Total de Unidades: {bag.totalItems}</p>

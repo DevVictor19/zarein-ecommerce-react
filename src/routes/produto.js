@@ -17,7 +17,7 @@ const Produto = () => {
   return (
     <>
       <ProdutosMenu productName={product.name} />
-      <FadeInMain style={{ padding: "56px 64px 108px" }}>
+      <FadeInMain>
         <ProdutosOrder
           name={product.name}
           description={product.description}

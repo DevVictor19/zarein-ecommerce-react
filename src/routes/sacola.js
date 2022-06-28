@@ -6,7 +6,7 @@ const Sacola = () => {
   return (
     <>
       <SacolaMenu />
-      <FadeInMain style={{ padding: "88px 64px" }}>
+      <FadeInMain>
         <SacolaContent />
       </FadeInMain>
     </>

@@ -1,7 +1,7 @@
 .emptyBag {
   width: 100%;
   text-align: center;
-  padding-bottom: 408px;
+  padding: 88px 64px 408px;
 }
 
 .emptyBag h1 {
@@ -140,4 +140,22 @@
 .displayActions button:last-child {
   background-color: var(--black-10);
   color: var(--black);
+}
+
+@media screen and (max-width: 768px) {
+  .emptyBag h1 {
+    font-size: 56px;
+  }
+}
+
+@media screen and (max-width: 628px) {
+  .emptyBag h1 {
+    font-size: 48px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .emptyBag {
+    padding: 88px 32px;
+  }
 }
