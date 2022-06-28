@@ -1,18 +1,18 @@
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useSelector } from "react-redux/es/exports";
+import { useState } from "react";
 
 import classes from "./header.module.css";
 import sacolaico from "../../assets/sacola-ico.png";
+import mobileMenu from "../../assets/hamburgerMenu.png";
+import NavigationLinks from "./navigationLinks";
 
 const Header = () => {
+  const [mobileMenuOn, setMobileMenuOn] = useState(false);
   const totalItems = useSelector((state) => state.bag.totalItems);
 
-  const activeClassStyle = {
-    borderBottom: "1px solid var(--black-75)",
-  };
-
-  const setActiveStyle = ({ isActive }) => {
-    return isActive ? activeClassStyle : { borderBottom: "" };
+  const toggleMobileMenu = () => {
+    setMobileMenuOn((prevState) => !prevState);
   };
 
   return (
@@ -20,30 +20,7 @@ const Header = () => {
       <div className={classes.headerContainer}>
         <h1>Zarein</h1>
         <div className={classes.desktopNavContainer}>
-          <nav>
-            <ul>
-              <li>
-                <NavLink style={setActiveStyle} to="/">
-                  Compras
-                </NavLink>
-              </li>
-              <li>
-                <NavLink style={setActiveStyle} to="catalogo">
-                  Catálogo
-                </NavLink>
-              </li>
-              <li>
-                <NavLink style={setActiveStyle} to="sobre">
-                  Sobre
-                </NavLink>
-              </li>
-              <li>
-                <NavLink style={setActiveStyle} to="contato">
-                  Contato
-                </NavLink>
-              </li>
-            </ul>
-          </nav>
+          <NavigationLinks />
           <div className={classes.bagItemsContainer}>
             <div>
               <Link to="sacola">
@@ -53,6 +30,14 @@ const Header = () => {
             <div className={classes.bagItemsCounter}>{totalItems}</div>
           </div>
         </div>
+        <div className={classes.mobileMenu} onClick={toggleMobileMenu}>
+          <img src={mobileMenu} alt="bars menu" />
+        </div>
+        {mobileMenuOn && (
+          <div className={classes.mobileNavContainer}>
+            <NavigationLinks onClick={toggleMobileMenu} />
+          </div>
+        )}
       </div>
     </header>
   );
