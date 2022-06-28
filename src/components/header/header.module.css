@@ -112,3 +112,18 @@
     display: block;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .headerContainer {
+    padding: 0 32px;
+  }
+
+  .headerContainer h1 {
+    font-size: 56px;
+  }
+
+  .mobileMenu img {
+    width: 56px;
+    height: 56px;
+  }
+}

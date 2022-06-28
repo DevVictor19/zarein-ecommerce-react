@@ -3,10 +3,12 @@ import SacolaContent from "../components/sacola/sacolaContent";
 import FadeInMain from "../components/UI/fadeInMain";
 
 const Sacola = () => {
+  // style={{ padding: "88px 64px" }}
+
   return (
     <>
       <SacolaMenu />
-      <FadeInMain style={{ padding: "88px 64px" }}>
+      <FadeInMain>
         <SacolaContent />
       </FadeInMain>
     </>

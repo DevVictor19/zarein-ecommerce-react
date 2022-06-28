@@ -10,6 +10,8 @@ const Compras = () => {
   const [currentFilter, setCurrentFilter] = useState("todos");
   const [firstRender, setFirstRender] = useState(true);
 
+  //style={{ padding: "88px 64px 0" }}
+
   const onClickFilterLink = (filter) => {
     if (filter === currentFilter) {
       return;
@@ -22,7 +24,7 @@ const Compras = () => {
   return (
     <>
       <ComprasMenu onClickMenu={onClickFilterLink} />
-      <FadeInMain style={{ padding: "88px 64px 0" }}>
+      <FadeInMain>
         {products.map((product) => (
           <ComprasCarousel
             key={product.sectionName}

@@ -1,5 +1,5 @@
 .carouselSectionWrapper {
-  margin-bottom: 136px;
+  margin: 0 64px 136px;
 }
 
 .carouselTitle {
@@ -72,23 +72,14 @@
   right: 0;
 }
 
-.my-node-enter {
-  opacity: 0;
-}
-.my-node-enter-active {
-  opacity: 1;
-  transition: opacity 200ms;
-}
-.my-node-exit {
-  opacity: 1;
-}
-.my-node-exit-active {
-  opacity: 0;
-  transition: opacity 200ms;
-}
-
 @media screen and (max-width: 1440px) {
   .carouselTitle {
     font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .carouselSectionWrapper {
+    margin: 0 32px 88px;
   }
 }

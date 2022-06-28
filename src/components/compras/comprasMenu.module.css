@@ -1,5 +1,6 @@
 .menuWrapper {
   margin-top: 232px;
+  margin-bottom: 88px;
   border-bottom: 1px solid var(--black-25);
 
   display: flex;
@@ -27,4 +28,10 @@
 
 .activeLink {
   border-bottom: 1px solid var(--black-75);
+}
+
+@media screen and (max-width: 480px) {
+  .menuWrapper nav ul li a {
+    font-size: 14px;
+  }
 }
