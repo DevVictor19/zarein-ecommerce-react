@@ -2,7 +2,7 @@ import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux/es/exports";
-import { hideNotification } from "../../store/actions";
+import { hideNotification } from "../../redux/ducks/notification";
 
 import classes from "./notification.module.css";
 

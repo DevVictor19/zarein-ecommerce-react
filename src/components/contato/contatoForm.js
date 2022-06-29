@@ -1,6 +1,9 @@
 import useForm from "../../hooks/useForm";
 import { useDispatch } from "react-redux/es/exports";
-import { showNotification, hideNotification } from "../../store/actions";
+import {
+  showNotification,
+  hideNotification,
+} from "../../redux/ducks/notification";
 
 import classes from "./contatoForm.module.css";
 

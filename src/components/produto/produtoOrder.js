@@ -1,10 +1,11 @@
 import { useRef } from "react";
 import { useDispatch } from "react-redux/es/exports";
+import { addItem } from "../../redux/ducks/bag";
 import {
-  addItem,
-  hideNotification,
   showNotification,
-} from "../../store/actions";
+  hideNotification,
+} from "../../redux/ducks/notification";
+import { useSelector } from "react-redux";
 
 import classes from "./produtoOrder.module.css";
 
@@ -12,6 +13,8 @@ const isNotEmpty = (value) => value.trim() !== "";
 
 const ProdutoOrder = (props) => {
   const dispatch = useDispatch();
+  const state = useSelector((state) => state);
+  console.log(state);
 
   const sizeInputRef = useRef("");
   const quantityInputRef = useRef("");

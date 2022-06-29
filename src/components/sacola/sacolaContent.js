@@ -1,12 +1,10 @@
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux/es/exports";
+import { addOne, removeOne, clearBag } from "../../redux/ducks/bag";
 import {
-  clearBag,
-  addOne,
-  removeOne,
-  showNotification,
   hideNotification,
-} from "../../store/actions/";
+  showNotification,
+} from "../../redux/ducks/notification";
 
 import classes from "./sacolaContent.module.css";
 

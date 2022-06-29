@@ -10,7 +10,7 @@ import Sobre from "./routes/sobre";
 import Contato from "./routes/contato";
 import Produto from "./routes/produto";
 import Sacola from "./routes/sacola";
-import store from "./store";
+import store from "./redux/store";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
